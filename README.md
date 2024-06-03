@@ -13,17 +13,18 @@ En este repositorio se muestra un modelo de prediccion de contaminacion de gases
 	import matplotlib.pyplot as plt
 	from scipy.interpolate; import make_interp_spline>
 
-###Función load data
+### Función load data
 
 #### Función para cargar datos de Excel
     def load_data(file):
 	      data = pd.read_excel(file)
           return data
 
-###Función prepare data
+
 
 #### Función para preparar los datos
 
+#Función prepare data
     def prepare_data(data, time_steps):
           X, y = [], []
           for i in range(len(data) - time_steps):
@@ -121,7 +122,7 @@ En este repositorio se muestra un modelo de prediccion de contaminacion de gases
                          color = get_green_color(value)
                          plt.plot(x_smooth[k:k+2], y_smooth[k:k+2], linestyle='-', color=color, alpha=1)
 
-###Nombre de ejes
+### Nombre de ejes
 
     plt.xlabel('Año')
     plt.ylabel('Cantidad de kilotoneladas mitigadas de CO2')
@@ -142,7 +143,7 @@ En este repositorio se muestra un modelo de prediccion de contaminacion de gases
     plt.tight_layout()
     plt.show()
 
-###Finalizacion y muestra de grafico
+### Finalizacion y muestra de grafico
 
     print("Predicciones para los próximos 20 años (año por año):")
     for i, prediction in enumerate(all_predictions_descaled):
