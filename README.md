@@ -1,9 +1,7 @@
-##Modelo-de-prediccion-MDL
+## Modelo-de-prediccion-MDL
 En este repositorio se muestra un modelo de prediccion de contaminacion de gases de efecto invernadero basado en bases de datos suministradas de proyectos de mecanismo de desarrollo limpio 
 
-##Modelo hecho con python
-
-###Importar librerías
+### Importar librerías de python
 
 	import numpy as np
 	import pandas as pd
@@ -13,18 +11,13 @@ En este repositorio se muestra un modelo de prediccion de contaminacion de gases
 	import matplotlib.pyplot as plt
 	from scipy.interpolate; import make_interp_spline>
 
-### Función load data
-
 #### Función para cargar datos de Excel
     def load_data(file):
 	      data = pd.read_excel(file)
           return data
 
-
-
 #### Función para preparar los datos
 
-#Función prepare data
     def prepare_data(data, time_steps):
           X, y = [], []
           for i in range(len(data) - time_steps):
@@ -139,7 +132,6 @@ En este repositorio se muestra un modelo de prediccion de contaminacion de gases
 
 ### Asegurarse de que el eje x muestre números enteros
     plt.xticks(years)
-
     plt.tight_layout()
     plt.show()
 
